@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { collection, addDoc } from "firebase/firestore/lite";
+import { collection, addDoc, serverTimestamp, setDoc } from "firebase/firestore/lite";
 import { firestore } from 'config/firebase';
 import { toast } from 'react-toastify';
 
@@ -15,7 +15,7 @@ export default function Add() {
 
         let userAge = Number(age)
 
-        let formData = { fullName, age: userAge }
+        let formData = { fullName, age: userAge, dateCreated: serverTimestamp() }
 
         try {
             const docRef = await addDoc(docsCollectionRef, formData);

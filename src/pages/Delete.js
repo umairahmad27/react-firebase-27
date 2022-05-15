@@ -30,7 +30,7 @@ export default function Delete() {
 
         readDocs()
 
-    }, [])
+    }, [docsCollectionRef])
 
     const deleteDocument = async (document) => {
 
