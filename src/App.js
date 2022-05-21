@@ -3,14 +3,15 @@
 // import Read from 'pages/Read';
 import './App.scss';
 import { ToastContainer } from 'react-toastify';
-import Register from 'pages/Register';
+// import Register from 'pages/Register';
+import Uploads from 'pages/Uploads';
 // import ArrayMethods from 'pages/ArrayMethods';
 // import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
-      <Register />
+      <Uploads />
       {/* <ArrayMethods /> */}
 
       <ToastContainer />
